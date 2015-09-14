@@ -2,6 +2,14 @@
 
 Este repositorio está creado con la finalidad de agilizar el proceso de entrenamiento de clasificadores HAAR.
 
+Para clonar este repositorio:
+
+```
+#!shell
+
+git clone https://sandiego206@bitbucket.org/sandiego206/haar_trainer.git
+```
+
 Contiene dos formas de entrenamiento:
 
 1. Cropped Images:  Donde usaremos imágenes positivas que **únicamente** contienen el objeto, y negativas que no lo incluyen. 
