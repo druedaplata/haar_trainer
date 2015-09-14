@@ -7,7 +7,7 @@ Para clonar este repositorio:
 ```
 #!shell
 
-git clone https://sandiego206@bitbucket.org/sandiego206/haar_trainer.git
+git clone https://bitbucket.org/sandiego206/haar_trainer.git
 ```
 
 Contiene dos formas de entrenamiento:
