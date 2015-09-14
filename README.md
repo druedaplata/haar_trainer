@@ -4,40 +4,31 @@ Este repositorio está creado con la finalidad de agilizar el proceso de entrena
 
 Contiene dos formas de entrenamiento:
 
-1. Cropped Images:  Donde usaremos imágenes positivas que unicamente contienen el objeto, y negativas que no lo incluyen.
+1. Cropped Images:  Donde usaremos imágenes positivas que **únicamente** contienen el objeto, y negativas que no lo incluyen. 
+En este caso creamos imágenes marcadas combinando positivas y negativas y creamos archivos de descripción automáticamente.
+
+2. Marked Images:  En esta forma de entrenamiento las imágenes positivas tienen el objeto a encontrar **marcado** en un archivo de descripción, 
+y las imágenes negativas no lo incluyen.
 
 
+# MODO DE USO #
 
+### Método 1: Cropped Images ###
 
+Requisitos:
 
+1. Un directorio con las imágenes **positivas** y una lista de estas en el mismo directorio llamada *positives.txt*
 
+2. Un directorio con las imágenes **negativas** y una lista de estas en el mismo directorio llamada *negatives.txt*
 
-# README #
+Para esta forma de entrenamiento encontrará lo siguiente:
 
-This README would normally document whatever steps are necessary to get your application up and running.
+* **CONFIG_HAAR.cfg**:  Aquí definimos los parámetros de configuración y entrenamiento, e indicamos la ubicación de los directorios de entrada y salida.
+* **01_create_samples.sh**:  Con este ejecutable combinamos las imágenes positivas y negativas para crear ejemplos nuevos y archivos de descripción automáticamente.
+* **02_combine_samples.sh**: Con este archivo combinamos las salidas anteriores en un vector el cual será leido por opencv para iniciar el entrenamiento.
+* **03_train_cascade.sh**:  Por último, lanzando este ejecutable iniciamos el entrenamiento, puede tardar varias horas.
+* **00_one_time_script.sh**: Lanza todos los ejecutables uno tras otro, en un solo script.
 
-### What is this repository for? ###
+### Método 2: Marked Images ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+### TO DO ###
